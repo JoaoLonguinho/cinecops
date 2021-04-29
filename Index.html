@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Cineautico</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cinestylesheet.css">
+  </head>
+  <body>
+    <header>
+        <h1 class="header-title">Cineautico - a melhor de rede de cinema da américa latina!</h1>
+    </header>
+    <div class="filmes"> <!-- Filme Um - Inicio -->
+      <div class="filmeUm">
+        <img src="castelo_animado.jpg" class="movie-banner" width="300px">
+          <h2 class="movieName" id="movieoneName"> </h2>
+            <h2 class="tittle-hour"> Horários:</h2>
+              <div class="hour" id="firstMovieHour"></div>
+                <div class="description" id="descriptionOne"></div>
+      </div> <!-- Filme Um - Fim -->
+
+      <div class="filmeUm"> <!-- Filme Dois - Inicio -->
+          <img src="a_viagem_de_chihiro.jpg" class="movie-banner" width="300px">
+            <h2 class="movieName" id="movietwoName"> </h2>
+              <h2 class="tittle-hour"> Horários:</h2>
+                <div class="hour" id="secondMovieHour"></div>
+                  <div class="description" id="descriptionTwo"></div>
+      </div> <!-- Filme Dois - Fim -->
+
+      <div class="filmeUm"> <!-- Filme Três - Inicio -->
+        <img src="susurros_do_coracao.png" class="movie-banner" width="300px">
+          <h2 class="movieName" id="moviethreeName"> </h2>
+            <h2 class="tittle-hour"> Horários:</h2>
+              <div class="hour" id="thirdMovieHour"></div>
+                <div class="description" id="descriptionThree"></div>
+                  </div> 
+      </div>
+    </div> <!-- Filme Três - Fim -->
+
+    <script>
+      function addMovie(name, hour, description) {
+        return{
+          name : name,
+          hour: hour,
+          description: description
+        }
+      };
+      movieOne = addMovie("Castelo Animado", "10h30", "Um filme muito bom");
+      
+      //Primeiro Filme
+      document.getElementById("movieoneName").innerHTML = movieOne.name;
+      document.getElementById("firstMovieHour").innerHTML = movieOne.hour;
+      document.getElementById("descriptionOne").innerHTML = movieOne.description;
+      
+
+      //Segundo Filme
+      movieOne = addMovie("A Viagem de Chihiro", "15h30", "Outro filme muito bom");
+
+      document.getElementById("movietwoName").innerHTML = movieOne.name;
+      document.getElementById("secondMovieHour").innerHTML = movieOne.hour;
+      document.getElementById("descriptionTwo").innerHTML = movieOne.description;
+      
+      //Terceiro Filme
+      movieOne = addMovie("Susurros do Coração", "20h30", "MDS, só tem filme bom");
+
+      document.getElementById("moviethreeName").innerHTML = movieOne.name;
+      document.getElementById("thirdMovieHour").innerHTML = movieOne.hour;
+      document.getElementById("descriptionThree").innerHTML = movieOne.description;
+
+    </script>
+  </body>
+</html>
